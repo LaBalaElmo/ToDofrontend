@@ -1,0 +1,13 @@
+<div>
+  <h1 mat-dialog-title>Create new status</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="createStatusForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Name of the status" formControlName="name">
+      </mat-form-field>
+      <div mat-dialog-actions>
+        <button mat-button type="submit" [disabled]="!createStatusForm.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

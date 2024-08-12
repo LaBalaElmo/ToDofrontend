@@ -1,0 +1,29 @@
+.container{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #141619;
+}
+
+.content{
+  display: flex;
+  width: 80%;
+  height: 70%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.left-side {
+  flex: 1;
+  background-image: url('https://img.freepik.com/premium-photo/two-people-pointing-computer-screen-while-working-it-company_236854-48528.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.main {
+  flex: 1;
+  background-color: #b5b5b5;
+}

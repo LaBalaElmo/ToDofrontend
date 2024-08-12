@@ -1,0 +1,10 @@
+<div class="container" id="{{id}}-status">
+  {{name}}
+  <div
+    cdkDropList
+    [cdkDropListData]="tasks"
+    class="list"
+    (cdkDropListDropped)="drop($event)">
+    <task-card *ngFor="let task of tasks" id="{{task.id}}" [description]="task.description" [title]="task.title" [statusId]="id"/>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container" id="{{id}}-task" cdkDrag>
+  <h3>{{title}}</h3>
+  <p>{{description}}</p>
+  <div class="buttons">
+    <button mat-button (click)="delete()">Delete</button>
+    <button mat-button (click)="openDialog()">Update</button>
+  </div>
+</div>

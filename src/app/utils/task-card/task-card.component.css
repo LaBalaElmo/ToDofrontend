@@ -1,0 +1,15 @@
+.container{
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  word-wrap: break-word;
+  margin-top: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}

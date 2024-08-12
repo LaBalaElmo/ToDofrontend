@@ -1,0 +1,14 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Enter your username" formControlName="username" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your email" formControlName="email" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" formControlName="password" type="password" required>
+    </mat-form-field>
+    <button mat-raised-button type="submit" [disabled]="!registerForm.valid">Submit</button>
+  </form>
+</div>

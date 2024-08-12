@@ -1,0 +1,9 @@
+<div class="container">
+  <custom-header class="header"/>
+  <div class="content" cdkDropListGroup>
+    <side-menu class="left-aside" *ngIf="(sideMenu | async)?.sidePanel"/>
+    <main class="main">
+      <router-outlet/>
+    </main>
+  </div>
+</div>
