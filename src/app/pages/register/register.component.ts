@@ -24,11 +24,12 @@ export class RegisterComponent {
     this.registerService.register(this.registerForm.value.username!, this.registerForm.value.email!, this.registerForm.value.password!).subscribe(
       () => {
         this.loginService.login(this.registerForm.value.email!, this.registerForm.value.password!).subscribe(
-          () => {
+          async () => {
             this.statusService.connectToStatus("2").subscribe()
             this.statusService.connectToStatus("3").subscribe()
-            this.statusService.connectToStatus("4").subscribe()
-            this.router.navigate(['/home']).then(() => {})
+            this.statusService.connectToStatus("4").subscribe(() => {
+              this.router.navigate(['/home']).then(() => {})
+            })
           }
         )
       }

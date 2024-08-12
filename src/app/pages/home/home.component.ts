@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StatusDTO} from "../../dto/StatusDTO";
 import {HomeService} from "./service/home.service";
 
@@ -7,11 +7,14 @@ import {HomeService} from "./service/home.service";
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   statuses: StatusDTO[] = [];
 
   constructor(private homeService: HomeService) {
-    homeService.getAllStatuses().subscribe(res => {
+  }
+
+  ngOnInit() {
+    this.homeService.getAllStatuses().subscribe(res => {
       console.log(res)
       this.statuses = res;
     })
